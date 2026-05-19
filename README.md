@@ -6,6 +6,12 @@
 >
 > Released under MIT. Open infrastructure for the Indian startup community.
 
+> ⚠️ **AI can make mistakes. Always verify the output.**
+>
+> This software generates assistive drafts and suggestions only. Every legal claim, citation, statute reference, procedural step, deadline calculation, and ground of relief must be independently verified by a qualified human practitioner before filing, advising a client, or relying on the output. The publisher accepts no liability for outputs used without verification.
+
+> 🛡️ **Privacy primitive: PII pseudonymisation** via [pseudonymisation-gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) (Wolfgang Rush · MIT). This firm uses the `india` jurisdiction module for cross-jurisdiction PII coverage. Open-source · zero runtime deps · session-scoped · in-memory only · never writes PII to disk.
+
 ---
 
 ## 🌐 अपनी भाषा चुनिए · तुमची भाषा निवडा · Choose your language
