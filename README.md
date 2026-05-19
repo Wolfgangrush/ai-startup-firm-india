@@ -8,6 +8,26 @@
 
 ---
 
+## 🌐 अपनी भाषा चुनिए · तुमची भाषा निवडा · Choose your language
+
+| Script | Language | Region | Guide |
+|---|---|---|---|
+| 🇬🇧 | **English** | India · Global | [GETTING_STARTED.md](GETTING_STARTED.md) |
+| 🇮🇳 | **हिन्दी (Hindi)** | UP · MP · Bihar · Rajasthan · Haryana · etc. | [GETTING_STARTED_HINDI.md](GETTING_STARTED_HINDI.md) |
+| 🇮🇳 | **मराठी (Marathi)** | Maharashtra | [GETTING_STARTED_MARATHI.md](GETTING_STARTED_MARATHI.md) |
+| 🇮🇳 | **বাংলা (Bengali)** | West Bengal · Tripura | [GETTING_STARTED_BENGALI.md](GETTING_STARTED_BENGALI.md) |
+| 🇮🇳 | **தமிழ் (Tamil)** | Tamil Nadu · Puducherry | [GETTING_STARTED_TAMIL.md](GETTING_STARTED_TAMIL.md) |
+| 🇮🇳 | **తెలుగు (Telugu)** | Andhra Pradesh · Telangana | [GETTING_STARTED_TELUGU.md](GETTING_STARTED_TELUGU.md) |
+| 🇮🇳 | **ગુજરાતી (Gujarati)** | Gujarat | [GETTING_STARTED_GUJARATI.md](GETTING_STARTED_GUJARATI.md) |
+| 🇮🇳 | **ಕನ್ನಡ (Kannada)** | Karnataka | [GETTING_STARTED_KANNADA.md](GETTING_STARTED_KANNADA.md) |
+| 🇮🇳 | **മലയാളം (Malayalam)** | Kerala · Lakshadweep | [GETTING_STARTED_MALAYALAM.md](GETTING_STARTED_MALAYALAM.md) |
+| 🇮🇳 | **ਪੰਜਾਬੀ (Punjabi)** | Punjab · Chandigarh | [GETTING_STARTED_PUNJABI.md](GETTING_STARTED_PUNJABI.md) |
+| 🇮🇳 | **ଓଡ଼ିଆ (Odia)** | Odisha | [GETTING_STARTED_ODIA.md](GETTING_STARTED_ODIA.md) |
+
+> 🙏 **Honest note:** Ten of these guides are AI-assisted. **Native-speaker PRs are warmly welcome** — see [TRANSLATION_HELP_WANTED.md](TRANSLATION_HELP_WANTED.md). Your dialect is your dignity; help us get it right.
+
+---
+
 ## What this is
 
 The AI Startup Firm India is a Claude-compatible shell that routes natural-language startup legal queries through 10 classified intents to 8 specialist agents, which invoke 5 Wolfgang Rush drafting plugins. It persists state across sessions via `/retrospective` and `/wake` skills, so the firm remembers your company, founders, cap table, and open matters between conversations.
@@ -83,10 +103,23 @@ This means the Firm remembers your company between sessions. It learns your cap 
 
 ## Getting started
 
-1. Install the 5 Wolfgang Rush plugins at `~/Desktop/AIO/wolfgang-rush-submissions/IN-startup/`
-2. Start a session with `/wake` to load saved state (or initialise a new firm)
-3. Describe what you need: "Draft a founders' agreement for Acme Tech" or "What's the ESI contribution rate?"
-4. End each session with `/retrospective` to save state for the next session
+Choose your language guide above and follow the 30-minute quick start:
+
+| File | Language |
+|---|---|
+| [GETTING_STARTED.md](GETTING_STARTED.md) | English |
+| [GETTING_STARTED_HINDI.md](GETTING_STARTED_HINDI.md) | हिन्दी (Hindi) |
+| [GETTING_STARTED_MARATHI.md](GETTING_STARTED_MARATHI.md) | मराठी (Marathi) |
+| [GETTING_STARTED_BENGALI.md](GETTING_STARTED_BENGALI.md) | বাংলা (Bengali) |
+| [GETTING_STARTED_TAMIL.md](GETTING_STARTED_TAMIL.md) | தமிழ் (Tamil) |
+| [GETTING_STARTED_TELUGU.md](GETTING_STARTED_TELUGU.md) | తెలుగు (Telugu) |
+| [GETTING_STARTED_GUJARATI.md](GETTING_STARTED_GUJARATI.md) | ગુજરાતી (Gujarati) |
+| [GETTING_STARTED_KANNADA.md](GETTING_STARTED_KANNADA.md) | ಕನ್ನಡ (Kannada) |
+| [GETTING_STARTED_MALAYALAM.md](GETTING_STARTED_MALAYALAM.md) | മലയാളം (Malayalam) |
+| [GETTING_STARTED_PUNJABI.md](GETTING_STARTED_PUNJABI.md) | ਪੰਜਾਬੀ (Punjabi) |
+| [GETTING_STARTED_ODIA.md](GETTING_STARTED_ODIA.md) | ଓଡ଼ିଆ (Odia) |
+
+Each guide walks you through: cloning the firm, installing the 5 Wolfgang Rush plugins, starting your first session with `/wake`, running your first draft, and saving state with `/retrospective`.
 
 ---
 
