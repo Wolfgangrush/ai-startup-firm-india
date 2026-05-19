@@ -1,0 +1,226 @@
+# Stamp duty schedules — 4 states v0.1
+# Sourced from state Stamp Acts as of 2026-05-19.
+# Verify before use. v0.2 expands to 28 states + UTs.
+
+last_verified: 2026-05-19
+
+maharashtra:
+  act: "Bombay Stamp Act 1958"
+  documents:
+    founders_agreement:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+    employment_contract:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+    offer_letter:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+    moa:
+      article: 10
+      duty: 500
+      type: fixed
+      note: "For nominal capital up to Rs. 1,00,000. Ad valorem for higher."
+    aoa:
+      article: 10
+      duty: 500
+      type: fixed
+    isafe_ccps:
+      article: 27
+      duty_percent: 0.05
+      type: ad_valorem
+      basis: investment_amount
+    sha:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+      note: "If no monetary consideration. SHA with share transfer = Article 62."
+    sha_with_transfer:
+      article: 62
+      duty_percent: 0.25
+      type: ad_valorem
+      basis: consideration
+    nda:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+    ip_assignment:
+      article: 50
+      duty: 200
+      type: fixed
+    posh_policy:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+    deed_of_adherence:
+      article: "5(h)(A)(iv)"
+      duty: 100
+      type: fixed
+
+karnataka:
+  act: "Karnataka Stamp Act 1957"
+  documents:
+    founders_agreement:
+      article: 5
+      duty: 200
+      type: fixed
+    employment_contract:
+      article: 5
+      duty: 200
+      type: fixed
+    offer_letter:
+      article: 5
+      duty: 200
+      type: fixed
+    moa:
+      article: 10
+      duty: 500
+      type: fixed
+    aoa:
+      article: 10
+      duty: 500
+      type: fixed
+    isafe_ccps:
+      article: 5
+      duty: 200
+      type: fixed
+    sha:
+      article: 5
+      duty: 200
+      type: fixed
+    sha_with_transfer:
+      article: 62
+      duty_percent: 0.25
+      type: ad_valorem
+      basis: consideration
+    nda:
+      article: 5
+      duty: 200
+      type: fixed
+    ip_assignment:
+      article: 50
+      duty: 200
+      type: fixed
+    posh_policy:
+      article: 5
+      duty: 200
+      type: fixed
+    deed_of_adherence:
+      article: 5
+      duty: 200
+      type: fixed
+
+delhi:
+  act: "Indian Stamp Act 1899 (as applicable to Delhi)"
+  documents:
+    founders_agreement:
+      article: 5
+      duty: 50
+      type: fixed
+    employment_contract:
+      article: 5
+      duty: 50
+      type: fixed
+    offer_letter:
+      article: 5
+      duty: 50
+      type: fixed
+    moa:
+      article: 10
+      duty: 500
+      type: fixed
+    aoa:
+      article: 10
+      duty: 500
+      type: fixed
+    isafe_ccps:
+      article: 5
+      duty: 50
+      type: fixed
+    sha:
+      article: 5
+      duty: 50
+      type: fixed
+    sha_with_transfer:
+      article: 62
+      duty_percent: 0.25
+      type: ad_valorem
+      basis: consideration
+    nda:
+      article: 5
+      duty: 50
+      type: fixed
+    ip_assignment:
+      article: 50
+      duty: 50
+      type: fixed
+    posh_policy:
+      article: 5
+      duty: 50
+      type: fixed
+    deed_of_adherence:
+      article: 5
+      duty: 50
+      type: fixed
+
+tamil_nadu:
+  act: "Indian Stamp Act 1899 (as applicable to Tamil Nadu)"
+  documents:
+    founders_agreement:
+      article: 5
+      duty: 20
+      type: fixed
+    employment_contract:
+      article: 5
+      duty: 20
+      type: fixed
+    offer_letter:
+      article: 5
+      duty: 20
+      type: fixed
+    moa:
+      article: 10
+      duty: 500
+      type: fixed
+    aoa:
+      article: 10
+      duty: 500
+      type: fixed
+    isafe_ccps:
+      article: 5
+      duty: 20
+      type: fixed
+    sha:
+      article: 5
+      duty: 20
+      type: fixed
+    sha_with_transfer:
+      article: 62
+      duty_percent: 0.25
+      type: ad_valorem
+      basis: consideration
+    nda:
+      article: 5
+      duty: 20
+      type: fixed
+    ip_assignment:
+      article: 50
+      duty: 20
+      type: fixed
+    posh_policy:
+      article: 5
+      duty: 20
+      type: fixed
+    deed_of_adherence:
+      article: 5
+      duty: 20
+      type: fixed
+
+flags:
+  ad_valorem_threshold_rupees: 500000
+  note: "If consideration > Rs. 5,00,000, Article 5 may not apply — ad valorem duty may be payable."
+  maharashtra_isafe_ambiguity: "Article 5 vs Article 27 classification depends on whether CCPS creates a charge."
+  multi_instrument_rule: "Each document in a transaction is separately stamped."

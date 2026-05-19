@@ -1,0 +1,106 @@
+# FEMA sectoral caps — FDI policy as of 2026-05-19
+# Sourced from DPIIT Consolidated FDI Policy and NDI Rules 2019.
+# Re-verify if >6 months from last verified date.
+
+last_verified: 2026-05-19
+
+sectors:
+  - sector: "Information Technology / Software / SaaS"
+    automatic_route_cap: 100
+    conditions: "None"
+    approval_above: null
+
+  - sector: "E-commerce (marketplace model)"
+    automatic_route_cap: 100
+    conditions: "Subject to Press Note 3 (2020). Inventory-based e-commerce: FDI not permitted."
+    approval_above: null
+
+  - sector: "Food product retail (manufactured in India)"
+    automatic_route_cap: 100
+    conditions: "Subject to FSSAI licensing. Multi-brand retail: 51%."
+    approval_above: null
+
+  - sector: "Defence"
+    automatic_route_cap: 74
+    conditions: "Above 74% requires government approval. Subject to industrial licensing under Industries (Development and Regulation) Act 1951."
+    approval_above: 74
+
+  - sector: "Insurance"
+    automatic_route_cap: 74
+    conditions: "Subject to IRDAI approval. Insurance intermediaries: 100% automatic."
+    approval_above: 74
+
+  - sector: "Banking (private sector)"
+    automatic_route_cap: 74
+    conditions: "Subject to RBI approval. Aggregate foreign investment up to 74%."
+    approval_above: 74
+
+  - sector: "NBFC"
+    automatic_route_cap: 100
+    conditions: "Subject to RBI minimum capitalisation norms. Certain NBFC activities require RBI approval."
+    approval_above: null
+
+  - sector: "Print Media"
+    automatic_route_cap: 26
+    conditions: "Newspapers, periodicals: 26%. Indian citizen must hold majority. Government approval above 26%."
+    approval_above: 26
+
+  - sector: "Real Estate / Construction Development"
+    automatic_route_cap: 100
+    conditions: "Minimum area: 20,000 sq m (construction) / 50,000 sq m (township). Lock-in: 3 years from completion. Minimum capitalisation: USD 10M (wholly-owned) / USD 5M (JV)."
+    approval_above: null
+
+  - sector: "Agricultural Activities"
+    automatic_route_cap: 0
+    conditions: "FDI prohibited. Exceptions: floriculture, horticulture, seed development, animal husbandry, pisciculture, aquaculture, cultivation of vegetables/mushrooms (under controlled conditions), tea/coffee/rubber/cardamom/palm oil/tree oil plantations."
+    approval_above: null
+
+  - sector: "Pharmaceuticals (brownfield)"
+    automatic_route_cap: 74
+    conditions: "Above 74% requires government approval. Greenfield: 100% automatic. Brownfield: non-compete clauses not permitted (except with government approval)."
+    approval_above: 74
+
+  - sector: "Telecom Services"
+    automatic_route_cap: 100
+    conditions: "Subject to Department of Telecommunications licensing and security conditions. Press Note 3 (2020) applies."
+    approval_above: null
+
+  - sector: "Asset Reconstruction Companies"
+    automatic_route_cap: 100
+    conditions: "Subject to RBI registration and regulation under SARFAESI Act 2002."
+    approval_above: null
+
+  - sector: "Insurance Intermediaries"
+    automatic_route_cap: 100
+    conditions: "Subject to IRDAI regulations. No approval route required."
+    approval_above: null
+
+  - sector: "Petroleum and Natural Gas (private sector refining)"
+    automatic_route_cap: 100
+    conditions: "Subject to sectoral regulations. PSU refining: 49% automatic."
+    approval_above: null
+
+press_note_3_2020:
+  title: "Press Note 3 of 2020 — Bordering Country Prior Approval"
+  rule: "An investor from a country that shares a land border with India, or where the beneficial owner is situated in or is a citizen of such a country, may invest only under the Government Approval Route."
+  bordering_countries:
+    - China
+    - Pakistan
+    - Bangladesh
+    - Nepal
+    - Bhutan
+    - Myanmar
+    - Afghanistan
+  applies_to: "All sectors. No automatic route. Prior DPIIT approval mandatory."
+
+filing_deadlines:
+  fc_gpr_days: 30             # within 30 days of allotment
+  fc_trs_days: 60             # within 60 days of transfer
+  share_issuance_days: 60     # within 60 days of receipt of funds
+  firms_portal: "https://firms.rbi.org.in/"
+
+fmv:
+  rule: 21
+  methodology: ["DCF", "NAV", "Comparable Company", "Market Multiple"]
+  valuer: "IBBI-registered valuer (mandatory)"
+  report_validity: "Valuation date must be not more than 90 days before the date of allotment."

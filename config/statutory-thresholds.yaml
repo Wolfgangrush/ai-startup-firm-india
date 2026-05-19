@@ -1,0 +1,154 @@
+# Statutory thresholds for AI Startup Firm India v0.1.0
+# All thresholds sourced from public-domain enactments as of 2026-05-19.
+# Re-verify before use if >6 months from last verification date.
+
+last_verified: 2026-05-19
+
+companies_act_2013:
+  private_placement:
+    section: 42
+    max_persons_per_year: 200           # excluding QIBs and ESOP allottees
+    pas3_filing_days: 30                # within 30 days of allotment
+    mgt14_filing_days: 30               # within 30 days of board resolution
+    allotment_days: 60                  # within 60 days of receipt of application money
+
+  sweat_equity:
+    section: 56
+    max_percent_paid_up: 15             # % of paid-up capital (25% with special resolution)
+    lock_in_years: 3                    # Rule 8(5) of Share Capital Rules
+    valuation: ibbi_registered_valuer   # mandatory
+
+  commencement:
+    section: "10A"
+    filing_days: 180                    # within 180 days of incorporation
+    form: INC-20A
+
+  entrenchment:
+    section: 5
+    threshold_percent: 75               # default entrenchment amendment threshold
+
+  drag_along:
+    sections: "235-236"
+    default_threshold_percent: 75       # % voting rights
+
+  annual_filings:
+    mgt7_days_after_agm: 60
+    aoc4_days_after_agm: 30
+    dir3_kyc_frequency: annual
+
+  board:
+    min_directors_private: 2
+    max_directors: 15                   # (15 without special resolution)
+    min_women_director: 1               # for certain classes of companies
+
+fema:
+  ndi_rules: 2019
+  fc_gpr_filing_days: 30               # within 30 days of allotment
+  share_issuance_days: 60              # within 60 days of receipt (else refund)
+  currency_watch_months: 6             # >6 months stale = falsification trigger
+  press_note_3_year: 2020              # bordering-country prior approval
+  fmv_rule: 21                         # Rule 21 of NDI Rules
+
+  sectoral_caps:
+    it_saas: 100                        # Automatic Route
+    ecommerce_marketplace: 100          # Automatic Route, subject to Press Note 3
+    defence: 74                         # Automatic Route, >74% approval
+    insurance: 74                       # Automatic Route, subject to IRDAI
+    banking_private: 74                 # Automatic Route, subject to RBI
+    nbfc: 100                           # Automatic Route, subject to RBI
+    print_media: 26                     # Automatic Route, >26% approval
+    real_estate: 100                    # Automatic Route, with conditions
+    agriculture: 0                      # Prohibited (except exemptions)
+    pharma_brownfield: 74               # Automatic Route, >74% approval
+    telecom: 100                        # Automatic Route, subject to DoT
+
+epf:
+  act: "EPF & MP Act 1952"
+  employee_contribution_percent: 12     # of Basic + DA
+  employer_contribution_percent: 12     # of Basic + DA (8.33% pension, 3.67% PF)
+  wage_ceiling: 15000                   # Rs. per month (Basic + DA)
+  applicability_employees: 20           # mandatory threshold
+
+esi:
+  act: "ESI Act 1948"
+  employee_contribution_percent: 0.75   # of gross wages
+  employer_contribution_percent: 3.25   # of gross wages
+  wage_ceiling: 21000                   # Rs. per month (gross)
+  applicability_employees: 10           # mandatory threshold
+
+gratuity:
+  act: "Payment of Gratuity Act 1972"
+  eligibility_years: 5                  # continuous service
+  formula_days_per_year: 15             # 15 days per completed year (15/26 × last drawn × years)
+  max_amount: 2000000                   # Rs. 20 lakh (as amended)
+
+bonus:
+  act: "Payment of Bonus Act 1965"
+  min_bonus_percent: 8.33               # of Basic + DA
+  max_bonus_percent: 20                 # of Basic + DA
+  applicability_employees: 20           # mandatory threshold
+  wage_ceiling: 21000                   # Rs. per month (for bonus computation)
+
+posh:
+  act: "POSH Act 2013"
+  applicability_employees: 10           # mandatory threshold
+  ic_term_years: 3                      # Internal Committee term
+  ic_min_women_percent: 50              # at least 50% women
+  ic_external_member: 1                 # mandatory
+  complaint_filing_months: 3            # from date of incident
+  inquiry_days: 90                      # completion of inquiry
+  employer_action_days: 60              # from inquiry report
+  annual_report_section: 21
+
+dpdp:
+  act: "DPDP Act 2023"
+  breach_notification_hours: 72         # to Data Protection Board (per DPDP Rules 2025)
+  data_principal_notification: prompt   # as soon as reasonably practicable
+  children_age: 18                      # below 18 = child (verifiable parental consent)
+
+shops_establishments:
+  states:
+    maharashtra:
+      act: "Bombay Shops and Establishments Act 1948"
+      max_hours_day: 9
+      max_hours_week: 48
+      weekly_off_days: 1
+      overtime_rate: 2.0               # × ordinary rate
+    karnataka:
+      act: "Karnataka Shops and Establishments Act 1961"
+      max_hours_day: 9
+      max_hours_week: 48
+      weekly_off_days: 1
+      overtime_rate: 2.0
+    delhi:
+      act: "Delhi Shops and Establishments Act 1954"
+      max_hours_day: 9
+      max_hours_week: 48
+      weekly_off_days: 1
+      overtime_rate: 2.0
+    tamil_nadu:
+      act: "Tamil Nadu Shops and Establishments Act 1947"
+      max_hours_day: 8
+      max_hours_week: 48
+      weekly_off_days: 1
+      overtime_rate: 2.0
+
+standing_orders:
+  act: "Industrial Employment (Standing Orders) Act 1946"
+  applicability_employees: 100          # mandatory threshold
+  schedules: 5
+
+minimum_wages:
+  act: "Minimum Wages Act 1948"
+  revision: variable_by_state_and_category
+  flag_if_below_state_schedule: true
+
+arbitration:
+  act: "Arbitration and Conciliation Act 1996"
+  section_12_5: true                    # Schedule VII disqualification
+  seats: ["Mumbai", "Bengaluru", "Delhi", "Chennai"]
+
+stamp_duty:
+  act: "Indian Stamp Act 1899"
+  states: ["Maharashtra", "Karnataka", "Delhi", "Tamil Nadu"]
+  v0_2_states: 28                       # future coverage

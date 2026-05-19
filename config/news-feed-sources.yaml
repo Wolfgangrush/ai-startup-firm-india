@@ -1,0 +1,130 @@
+# News feed sources — AI Startup Firm India v0.1.0
+# 6 source classes. Rule 36 firewall: news aggregation only.
+# All URLs are public-domain. No authenticated or private endpoints.
+
+last_verified: 2026-05-19
+
+schedule:
+  fetch_time: "06:00"
+  timezone: "Asia/Kolkata"
+  frequency: daily
+  on_demand: true
+  cache_path: "~/.ai-startup-firm-india/palace/news-cache/"
+  cache_format: "YYYY-MM-DD.md"
+  max_cache_size_mb: 5
+  cache_retention_days: 30
+
+sources:
+
+  class_1_startup_india_dpiit:
+    label: "Startup India / DPIIT"
+    description: "Government startup policy, schemes, and recognition"
+    feeds:
+      - name: "Startup India Portal"
+        url: "https://www.startupindia.gov.in/"
+        type: portal
+        captures: "DPIIT recognition, 80-IAC tax holiday, seed fund scheme, state policies"
+      - name: "DPIIT"
+        url: "https://dpiit.gov.in/"
+        type: portal
+        captures: "FDI policy press notes, sectoral cap revisions, industrial policy"
+
+  class_2_rbi_sebi_mca:
+    label: "RBI / SEBI / MCA"
+    description: "Regulatory notifications and circulars affecting startups"
+    feeds:
+      - name: "RBI Notifications"
+        url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx"
+        type: regulatory
+        captures: "Master Direction updates, FEMA notifications, FC-GPR form changes"
+      - name: "SEBI"
+        url: "https://www.sebi.gov.in/"
+        type: regulatory
+        captures: "AIF regulations, ICDR amendments, listing rules, startup platform updates"
+      - name: "MCA"
+        url: "https://www.mca.gov.in/"
+        type: regulatory
+        captures: "Companies Act circulars, MCA21 portal changes, form revisions"
+
+  class_3_startup_media:
+    label: "Inc42 / YourStory / Entrackr"
+    description: "Startup ecosystem news, funding rounds, and sector reports"
+    feeds:
+      - name: "Inc42"
+        url: "https://inc42.com/"
+        type: media
+        captures: "Funding rounds, M&A, sector reports, startup ecosystem news"
+      - name: "YourStory"
+        url: "https://yourstory.com/"
+        type: media
+        captures: "Startup profiles, funding announcements, ecosystem events"
+      - name: "Entrackr"
+        url: "https://entrackr.com/"
+        type: media
+        captures: "Funding tracker, startup layoffs, regulatory news"
+
+  class_4_accelerators_vcs:
+    label: "YC / Sequoia Surge / Accel / Antler / Stellaris"
+    description: "Accelerator programmes, batch applications, founder events"
+    feeds:
+      - name: "Y Combinator"
+        url: "https://www.ycombinator.com/"
+        type: accelerator
+        captures: "Batch applications, deadlines, startup school, events"
+      - name: "Sequoia Surge"
+        url: "https://www.surgeahead.com/"
+        type: accelerator
+        captures: "Surge programme applications, founder events"
+      - name: "Accel"
+        url: "https://www.accel.com/"
+        type: vc
+        captures: "Accel Atoms programme, founder resources, events"
+      - name: "Antler"
+        url: "https://www.antler.co/"
+        type: vc
+        captures: "Residency applications, cohort announcements"
+      - name: "Stellaris Venture Partners"
+        url: "https://stellarisventures.com/"
+        type: vc
+        captures: "Founder events, programme announcements"
+
+  class_5_angel_networks:
+    label: "Indian Angel Network / LetsVenture"
+    description: "Angel investment activity and investor sentiment"
+    feeds:
+      - name: "Indian Angel Network"
+        url: "https://www.indianangelnetwork.com/"
+        type: angel_network
+        captures: "Active angel investors, sector interest, events"
+      - name: "LetsVenture"
+        url: "https://www.letsventure.com/"
+        type: angel_platform
+        captures: "Active fundraising startups, investor sentiment"
+
+  class_6_msme_events:
+    label: "MSME / Startup India Events"
+    description: "Government grants, mentorship programmes, startup fairs"
+    feeds:
+      - name: "MSME"
+        url: "https://msme.gov.in/"
+        type: government
+        captures: "MSME registration, grants, schemes, procurement"
+      - name: "Startup India Events"
+        url: "https://www.startupindia.gov.in/content/sih/en/events.html"
+        type: government
+        captures: "Startup fairs, mentorship programmes, hackathons"
+
+rule_36_firewall:
+  description: "News aggregation only. No legal advice. No solicitation. No editorial."
+  output_rules:
+    - "State source and URL for every item"
+    - "No legal commentary on funding rounds"
+    - "No CTAs or solicitation language"
+    - "No ranking or rating of law firms, VCs, or accelerators"
+    - "Pure aggregation: headline + source + URL"
+
+falsification_triggers:
+  - "Any source URL changes → flag + STOP_AND_ASK.md"
+  - "RSS feed deprecated by source → remove from rotation + log"
+  - "Cache exceeds 5MB/day → paginate + truncate"
+  - "Ad-hoc fetch fails → serve stale cache with 'last updated' warning"
